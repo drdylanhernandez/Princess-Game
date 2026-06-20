@@ -51,7 +51,8 @@ class CharacterSelectionState(GameState):
             elif event.key == pygame.K_RETURN:
                 # Start the game with selected color
                 selected_color = self.color_names[self.selected_index]
-                knight = Knight(selected_color, 600, 700)
+                # Spawn knight at TOP-LEFT (50, 50) - safe starting position
+                knight = Knight(selected_color, 50, 50)
                 level1 = Level1(self.game, knight)
                 self.game.change_state(level1)
     
