@@ -7,8 +7,25 @@ from enemy import ExBoyfriend
 from tools import ToolBox, DiceRoller
 
 
+class Building:
+    """A building that blocks movement"""
+    def __init__(self, x, y, width, height):
+        self.rect = pygame.Rect(x, y, width, height)
+        self.color = (139, 69, 19)  # Brown
+        self.outline_color = (101, 50, 14)  # Darker brown
+    
+    def draw(self, screen):
+        pygame.draw.rect(screen, self.color, self.rect)
+        pygame.draw.rect(screen, self.outline_color, self.rect, 3)
+        # Draw windows
+        window_size = 15
+        for wx in range(self.rect.x + 10, self.rect.x + self.rect.width - 10, 25):
+            for wy in range(self.rect.y + 10, self.rect.y + self.rect.height - 10, 25):
+                pygame.draw.rect(screen, (255, 255, 100), (wx, wy, window_size, window_size))
+
+
 class Level1:
-    """Level 1 implementation - Escape the town"""
+    """Level 1 implementation - Escape the town maze"""
     
     def __init__(self, game, knight):
         """
@@ -23,9 +40,12 @@ class Level1:
         self.width = game.screen.get_width()
         self.height = game.screen.get_height()
         
+        # Create town buildings (Pac-Man style maze)
+        self.buildings = self._create_town_layout()
+        
         # Level elements
-        # Enemy spawns at top-right, far from player
-        self.enemy = ExBoyfriend(self.width - 100, 50)
+        # Enemy spawns at opposite end of town
+        self.enemy = ExBoyfriend(self.width - 100, self.height - 100)
         self.tool_box = ToolBox(self.width // 2, self.height // 2)
         self.dice_roller = DiceRoller()
         
@@ -41,8 +61,41 @@ class Level1:
         self.font_medium = pygame.font.Font(None, 48)
         self.font_small = pygame.font.Font(None, 36)
         
-        # Escape area (bottom of screen)
-        self.escape_zone = pygame.Rect(0, self.height - 100, self.width, 100)
+        # Escape area (right side of town)
+        self.escape_zone = pygame.Rect(self.width - 80, 0, 80, self.height)
+    
+    def _create_town_layout(self):
+        """Create a Pac-Man style town layout with buildings"""
+        buildings = []
+        
+        # Block size and spacing
+        block_width = 80
+        block_height = 80
+        street_width = 50
+        
+        # Create grid of buildings with streets
+        for row in range(0, self.height, block_height + street_width):
+            for col in range(0, self.width, block_width + street_width):
+                # Skip some positions to create varied maze
+                if (row // (block_height + street_width) + col // (block_width + street_width)) % 3 == 0:
+                    continue
+                
+                # Skip right edge (escape zone) and top-left (starting area)
+                if col > self.width - 200:
+                    continue
+                if row < 100 and col < 100:
+                    continue
+                
+                buildings.append(Building(col, row, block_width, block_height))
+        
+        return buildings
+    
+    def check_collision(self, rect):
+        """Check if a rectangle collides with any building"""
+        for building in self.buildings:
+            if rect.colliderect(building.rect):
+                return True
+        return False
     
     def handle_event(self, event):
         """Handle input events"""
@@ -64,14 +117,32 @@ class Level1:
         
         # Handle player input
         keys = pygame.key.get_pressed()
+        old_x, old_y = self.knight.x, self.knight.y
+        
         self.knight.handle_input(keys)
+        
+        # Check collision with buildings - revert if collision
+        if self.check_collision(self.knight.rect):
+            self.knight.x, self.knight.y = old_x, old_y
+            self.knight.rect.x = self.knight.x
+            self.knight.rect.y = self.knight.y
         
         # Keep player in bounds
         self.knight.x = max(0, min(self.knight.x, self.width - self.knight.width))
         self.knight.y = max(0, min(self.knight.y, self.height - self.knight.height))
+        self.knight.rect.x = self.knight.x
+        self.knight.rect.y = self.knight.y
         
         # Update enemy
         self.enemy.update(self.knight)
+        
+        # Check enemy collision with buildings
+        if self.check_collision(self.enemy.rect):
+            # Revert enemy movement
+            self.enemy.x -= (self.enemy.x - self.enemy.rect.x)
+            self.enemy.y -= (self.enemy.y - self.enemy.rect.y)
+            self.enemy.rect.x = self.enemy.x
+            self.enemy.rect.y = self.enemy.y
         
         # Update threat level
         self.threat_level = self.enemy.get_threat_level(self.knight)
@@ -94,14 +165,18 @@ class Level1:
     
     def draw(self, screen):
         """Draw level"""
-        # Background
-        screen.fill((100, 150, 100))  # Green grass
+        # Background (streets)
+        screen.fill((180, 180, 180))  # Gray streets
         
-        # Town area
-        pygame.draw.rect(screen, (200, 180, 140), pygame.Rect(0, 0, self.width, 400))
+        # Draw buildings
+        for building in self.buildings:
+            building.draw(screen)
         
-        # Forest area (escape zone)
+        # Draw escape zone
         pygame.draw.rect(screen, (34, 139, 34), self.escape_zone)
+        escape_text = self.font_small.render("FOREST", True, (255, 255, 255))
+        escape_text_rect = escape_text.get_rect(center=(self.width - 40, self.height // 2))
+        screen.blit(escape_text, escape_text_rect)
         
         # Draw level elements
         self.tool_box.draw(screen)
