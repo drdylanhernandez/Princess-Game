@@ -24,8 +24,9 @@ class Level1:
         self.height = game.screen.get_height()
         
         # Level elements
-        self.enemy = ExBoyfriend(100, 100)
-        self.tool_box = ToolBox(self.width // 2, 200)
+        # Enemy spawns at top-right, far from player
+        self.enemy = ExBoyfriend(self.width - 100, 50)
+        self.tool_box = ToolBox(self.width // 2, self.height // 2)
         self.dice_roller = DiceRoller()
         
         # Level state
