@@ -1,199 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$59 New Patient Special | Axis Spine and Sport | Gilbert, Phoenix, Tempe</title>
-  <meta name="description" content="Claim your $59 new patient visit at Axis Spine and Sport. Official ASU Athletic Partner. Locations in Gilbert, Phoenix, and Tempe. Board Certified Chiropractic Physicians.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --gold: #e5be5e;
-      --gold-dark: #cba245;
-      --dark-grey: #767b7f;
-      --light-grey: #c3cace;
-      --bg: #f8fafc;
-      --white: #ffffff;
-      --black: #000000;
-      --border: #c3cace;
-      --radius: 8px;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif; }
-    body { color: var(--black); line-height: 1.6; background: var(--bg); }
-    header { background: var(--black); border-bottom: 2px solid var(--gold); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; gap: 1rem; }
-    .logo-img { height: 40px; width: auto; display: block; }
-    .phone-btn { background: var(--gold); color: var(--black); padding: 0.6rem 1.1rem; border-radius: var(--radius); text-decoration: none; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.4px; white-space: nowrap; }
-    .phone-btn:hover { background: var(--gold-dark); }
-    .hero { background: var(--black); color: var(--white); padding: 3.5rem 1.5rem 4rem; text-align: center; border-bottom: 4px solid var(--gold); }
-    .hero-content { max-width: 820px; margin: 0 auto; }
-    .badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 1.2rem; }
-    .badge { display: inline-block; background: var(--dark-grey); color: var(--gold); padding: 0.35rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--gold); letter-spacing: 0.8px; text-transform: uppercase; }
-    .asu-badge { display: inline-block; background: var(--gold); color: var(--black); padding: 0.35rem 0.9rem; border-radius: 4px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px; }
-    .hero h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); line-height: 1.15; margin-bottom: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: -0.5px; }
-    .hero .sub { font-size: 1.05rem; margin-bottom: 1.75rem; color: var(--light-grey); max-width: 640px; margin-left: auto; margin-right: auto; }
-    .offer-card { background: var(--white); color: var(--black); max-width: 520px; margin: 0 auto; padding: 2rem 1.75rem; border-radius: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.35); border-top: 5px solid var(--gold); text-align: left; }
-    .offer-title { font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.35rem; }
-    .price { font-size: 3rem; font-weight: 900; line-height: 1; margin-bottom: 0.75rem; }
-    .price span { font-size: 0.95rem; color: var(--dark-grey); font-weight: 600; text-decoration: line-through; margin-left: 0.35rem; }
-    .offer-list { list-style: none; margin: 0 0 1.25rem; padding: 0; }
-    .offer-list li { position: relative; padding-left: 1.35rem; margin-bottom: 0.45rem; font-size: 0.95rem; color: #333; font-weight: 600; }
-    .offer-list li::before { content: ""; position: absolute; left: 0; top: 0.45rem; width: 0.55rem; height: 0.55rem; background: var(--gold); border-radius: 2px; }
-    .cta-btn { display: block; width: 100%; background: var(--gold); color: var(--black); padding: 1.05rem; border-radius: var(--radius); text-decoration: none; font-weight: 800; font-size: 1.05rem; text-align: center; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; }
-    .cta-btn:hover { background: var(--gold-dark); }
-    .cta-note { font-size: 0.75rem; color: var(--dark-grey); margin-top: 0.75rem; text-align: center; font-weight: 600; }
-    .proof { padding: 3rem 1.5rem; background: var(--white); text-align: center; border-bottom: 1px solid var(--border); }
-    .proof h2 { font-weight: 800; font-size: clamp(1.3rem, 3vw, 1.75rem); text-transform: uppercase; margin-bottom: 1.5rem; }
-    .proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
-    .proof-item h3 { font-size: 1.6rem; font-weight: 900; }
-    .proof-item p { color: var(--dark-grey); font-weight: 700; text-transform: uppercase; font-size: 0.78rem; letter-spacing: 0.4px; margin-top: 0.25rem; }
-    .insurance-banner { background: var(--light-grey); padding: 1.25rem 1.5rem; text-align: center; }
-    .insurance-banner p { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.4px; }
-    .services { padding: 3.5rem 1.5rem; max-width: 1100px; margin: 0 auto; }
-    .services h2 { text-align: center; font-size: clamp(1.4rem, 3vw, 1.9rem); margin-bottom: 2rem; font-weight: 800; text-transform: uppercase; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
-    .service-card { background: var(--white); padding: 1.6rem; border-radius: var(--radius); border: 1px solid var(--border); border-left: 5px solid var(--gold); }
-    .service-card h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 0.5rem; }
-    .service-card p { color: var(--dark-grey); font-size: 0.92rem; }
-    .locations { padding: 3.5rem 1.5rem 4rem; background: var(--white); border-top: 1px solid var(--border); }
-    .locations h2 { text-align: center; font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem; }
-    .locations .intro { text-align: center; color: var(--dark-grey); margin-bottom: 2rem; font-weight: 600; }
-    .loc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; max-width: 1100px; margin: 0 auto; }
-    .loc-card { border: 1px solid var(--border); border-radius: 12px; padding: 1.6rem; background: var(--bg); display: flex; flex-direction: column; gap: 0.65rem; }
-    .loc-card h3 { font-size: 1.15rem; font-weight: 800; text-transform: uppercase; }
-    .loc-card .addr, .loc-card .hours { color: var(--dark-grey); font-size: 0.9rem; font-weight: 600; }
-    .loc-card a.phone { color: var(--black); font-weight: 800; text-decoration: none; font-size: 1.05rem; }
-    .loc-card a.phone:hover { color: var(--gold-dark); }
-    .loc-cta { margin-top: auto; display: inline-block; text-align: center; background: var(--black); color: var(--white); padding: 0.85rem 1rem; border-radius: var(--radius); text-decoration: none; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.4px; border-bottom: 3px solid var(--gold); }
-    .loc-cta:hover { background: #222; }
-    footer { background: var(--black); color: var(--light-grey); text-align: center; padding: 2rem 1.5rem; font-size: 0.8rem; font-weight: 600; border-top: 1px solid var(--dark-grey); }
-    footer a { color: var(--gold); }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "Axis Spine and Sport",
-    "url": "https://www.axisspineandsport.com/",
-    "medicalSpecialty": "Chiropractic",
-    "areaServed": ["Gilbert, AZ", "Phoenix, AZ", "Tempe, AZ"],
-    "priceRange": "$$",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-      "opens": "08:45",
-      "closes": "18:30"
-    }
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$59 New Patient Special | Axis Spine and Sport</title>
+<meta name="description" content="Claim your $59 new patient visit at Axis Spine and Sport. Official ASU Athletic Partner. Gilbert, Phoenix, Tempe.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#e5be5e;--gold-dark:#cba245;--dark:#767b7f;--light:#c3cace;--bg:#f8fafc;--w:#fff;--b:#000}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Montserrat,-apple-system,sans-serif}
+body{color:var(--b);line-height:1.6;background:var(--bg)}
+header{background:var(--b);border-bottom:2px solid var(--gold);padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+.logo{height:40px}
+.btn{background:var(--gold);color:var(--b);padding:.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:800;font-size:.8rem;text-transform:uppercase}
+.hero{background:var(--b);color:var(--w);padding:3rem 1.5rem 3.5rem;text-align:center;border-bottom:4px solid var(--gold)}
+.badge{display:inline-block;background:var(--dark);color:var(--gold);padding:.35rem 1rem;border-radius:50px;font-size:.75rem;font-weight:700;border:1px solid var(--gold);margin:.25rem}
+.asu{background:var(--gold);color:var(--b);border:none}
+h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;text-transform:uppercase;margin:1rem 0 .75rem}
+.sub{color:var(--light);max-width:640px;margin:0 auto 1.5rem}
+.card{background:var(--w);color:var(--b);max-width:500px;margin:0 auto;padding:1.75rem;border-radius:12px;border-top:5px solid var(--gold);text-align:left;box-shadow:0 12px 32px rgba(0,0,0,.35)}
+.price{font-size:2.75rem;font-weight:900}
+.price span{font-size:.9rem;color:var(--dark);text-decoration:line-through;font-weight:600;margin-left:.35rem}
+ul{list-style:none;margin:1rem 0}
+li{padding-left:1.2rem;margin:.4rem 0;font-weight:600;position:relative}
+li:before{content:"";position:absolute;left:0;top:.5rem;width:.5rem;height:.5rem;background:var(--gold);border-radius:2px}
+.cta{display:block;width:100%;background:var(--gold);color:var(--b);padding:1rem;border-radius:8px;text-decoration:none;font-weight:800;text-align:center;text-transform:uppercase}
+.note{font-size:.75rem;color:var(--dark);text-align:center;margin-top:.75rem;font-weight:600}
+.section{padding:2.5rem 1.5rem;max-width:1100px;margin:0 auto}
+.section h2{text-align:center;font-weight:800;text-transform:uppercase;margin-bottom:1.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.loc{background:var(--w);border:1px solid var(--light);border-radius:12px;padding:1.4rem;display:flex;flex-direction:column;gap:.5rem}
+.loc h3{font-weight:800;text-transform:uppercase}
+.loc .m{color:var(--dark);font-weight:600;font-size:.9rem}
+.loc a.p{color:var(--b);font-weight:800;text-decoration:none;font-size:1.05rem}
+.loc a.b{margin-top:auto;background:var(--b);color:var(--w);text-align:center;padding:.8rem;border-radius:8px;text-decoration:none;font-weight:800;font-size:.85rem;text-transform:uppercase;border-bottom:3px solid var(--gold)}
+.proof{background:var(--w);padding:2.5rem 1.5rem;text-align:center;border-bottom:1px solid var(--light)}
+.proof-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;max-width:900px;margin:0 auto}
+.proof h3{font-size:1.5rem;font-weight:900}
+.proof p{color:var(--dark);font-weight:700;text-transform:uppercase;font-size:.75rem}
+.banner{background:var(--light);padding:1rem;text-align:center;font-weight:700;text-transform:uppercase;font-size:.85rem}
+footer{background:var(--b);color:var(--light);text-align:center;padding:2rem 1.5rem;font-size:.8rem;font-weight:600}
+footer a{color:var(--gold)}
+</style>
 </head>
 <body>
-  <header>
-    <a href="https://www.axisspineandsport.com/"><img src="https://www.axisspineandsport.com/wp-content/uploads/2025/12/Chiropractic-Tempe-AZ-Axis-Spine-and-Sport-Header-Logo.webp" alt="Axis Spine and Sport" class="logo-img"></a>
-    <a href="#locations" class="phone-btn">Find a Location</a>
-  </header>
-
-  <section class="hero">
-    <div class="hero-content">
-      <div class="badge-row">
-        <span class="badge">Gilbert · Phoenix · Tempe</span>
-        <span class="asu-badge">Official ASU Athletic Partner</span>
-      </div>
-      <h1>Chiropractic Built for Active People in the Valley</h1>
-      <p class="sub">Board Certified Chiropractic Physicians. We find the root cause, not just the symptom. Start with the $59 new patient visit.</p>
-
-      <div class="offer-card" id="offer">
-        <div class="offer-title">New Patient Special</div>
-        <div class="price">$59 <span>Over $700 value</span></div>
-        <ul class="offer-list">
-          <li>Consultation</li>
-          <li>Physical Exam</li>
-          <li>Movement &amp; Alignment Analysis</li>
-          <li>Digital X-rays (if needed)</li>
-          <li>Personalized First Treatment</li>
-        </ul>
-        <a href="#locations" class="cta-btn">Choose Your Clinic &amp; Book</a>
-        <p class="cta-note">PPO health insurance, auto accident, and workers' compensation cases accepted. Insurance may further reduce your rate.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="proof">
-    <h2>Trusted Across the Valley</h2>
-    <div class="proof-grid">
-      <div class="proof-item">
-        <h3>2,000+</h3>
-        <p>5-Star Reviews</p>
-      </div>
-      <div class="proof-item">
-        <h3>3 Clinics</h3>
-        <p>Gilbert · Phoenix · Tempe</p>
-      </div>
-      <div class="proof-item">
-        <h3>Mon–Sat</h3>
-        <p>Open Mon–Thu until 6:30 PM</p>
-      </div>
-      <div class="proof-item">
-        <h3 style="font-size:1.25rem;margin-top:0.35rem;">Board Certified</h3>
-        <p>Chiropractic Physicians</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="insurance-banner">
-    <p>PPO Health Insurance · Auto Accident Cases · Workers' Compensation</p>
-  </div>
-
-  <section class="services">
-    <h2>What Sets Us Apart</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Movement &amp; Alignment Analysis</h3>
-        <p>We look at how you move so we can fix the weak links that keep injuries coming back.</p>
-      </div>
-      <div class="service-card">
-        <h3>Digital X-rays</h3>
-        <p>On-site imaging when you need it, so your first plan is based on what is actually going on.</p>
-      </div>
-      <div class="service-card">
-        <h3>Shockwave Therapy</h3>
-        <p>Advanced care for stubborn tendon and joint issues that basic adjustments alone do not solve.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="locations" id="locations">
-    <h2>Pick Your Location</h2>
-    <p class="intro">Call the clinic nearest you or book online. Same $59 new patient offer at all three.</p>
-    <div class="loc-grid">
-      <article class="loc-card">
-        <h3>Gilbert</h3>
-        <p class="addr">3341 E Queen Creek Rd #109<br>Gilbert, AZ 85297</p>
-        <a class="phone" href="tel:4808425020">(480) 842-5020</a>
-        <p class="hours">Mon–Thu until 6:30 PM · Fri–Sat mornings · Sun closed</p>
-        <a class="loc-cta" href="https://www.gilbert.axisspineandsport.com/">Book Gilbert</a>
-      </article>
-      <article class="loc-card">
-        <h3>Phoenix</h3>
-        <p class="addr">4515 N 16th St Suite 106<br>Phoenix, AZ 85016</p>
-        <a class="phone" href="tel:4805205160">(480) 520-5160</a>
-        <p class="hours">Mon–Thu until 6:30 PM · Fri–Sat mornings · Sun closed</p>
-        <a class="loc-cta" href="https://www.phoenix.axisspineandsport.com/">Book Phoenix</a>
-      </article>
-      <article class="loc-card">
-        <h3>Tempe</h3>
-        <p class="addr">2155 E University Dr #110<br>Tempe, AZ 85288</p>
-        <a class="phone" href="tel:4804544776">(480) 454-4776</a>
-        <p class="hours">Mon–Thu until 6:30 PM · Fri–Sat mornings · Sun closed</p>
-        <a class="loc-cta" href="https://www.tempe.axisspineandsport.com/">Book Tempe</a>
-      </article>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2026 Axis Spine and Sport. Official Arizona State University Athletic Partner.</p>
-    <p style="margin-top:0.5rem;"><a href="https://www.axisspineandsport.com/">axisspineandsport.com</a></p>
-  </footer>
+<header>
+<a href="https://www.axisspineandsport.com/"><img class="logo" src="https://www.axisspineandsport.com/wp-content/uploads/2025/12/Chiropractic-Tempe-AZ-Axis-Spine-and-Sport-Header-Logo.webp" alt="Axis Spine and Sport"></a>
+<a class="btn" href="#locations">Find a Location</a>
+</header>
+<section class="hero">
+<span class="badge">Gilbert · Phoenix · Tempe</span>
+<span class="badge asu">Official ASU Athletic Partner</span>
+<h1>Chiropractic Built for Active People in the Valley</h1>
+<p class="sub">Board Certified Chiropractic Physicians. We find the root cause, not just the symptom. Start with the $59 new patient visit.</p>
+<div class="card" id="offer">
+<div style="font-weight:800;text-transform:uppercase;letter-spacing:.5px;font-size:.9rem">New Patient Special</div>
+<div class="price">$59 <span>Over $700 value</span></div>
+<ul>
+<li>Consultation</li>
+<li>Physical Exam</li>
+<li>Movement &amp; Alignment Analysis</li>
+<li>Digital X-rays (if needed)</li>
+<li>Personalized First Treatment</li>
+</ul>
+<a class="cta" href="#locations">Choose Your Clinic &amp; Book</a>
+<p class="note">PPO health insurance, auto accident, and workers' compensation cases accepted.</p>
+</div>
+</section>
+<section class="proof">
+<h2 style="font-weight:800;text-transform:uppercase;margin-bottom:1.25rem">Trusted Across the Valley</h2>
+<div class="proof-grid">
+<div><h3>2,000+</h3><p>5-Star Reviews</p></div>
+<div><h3>3 Clinics</h3><p>Gilbert · Phoenix · Tempe</p></div>
+<div><h3>Mon–Sat</h3><p>Open Mon–Thu until 6:30 PM</p></div>
+<div><h3 style="font-size:1.15rem;margin-top:.3rem">Board Certified</h3><p>Chiropractic Physicians</p></div>
+</div>
+</section>
+<div class="banner">PPO Health Insurance · Auto Accident · Workers' Compensation</div>
+<section class="section" id="locations">
+<h2>Pick Your Location</h2>
+<p style="text-align:center;color:#767b7f;font-weight:600;margin-bottom:1.5rem">Same $59 new patient offer at all three clinics.</p>
+<div class="grid">
+<article class="loc">
+<h3>Gilbert</h3>
+<p class="m">3341 E Queen Creek Rd #109<br>Gilbert, AZ 85297</p>
+<a class="p" href="tel:4808425020">(480) 842-5020</a>
+<p class="m">Mon–Thu until 6:30 PM · Fri–Sat mornings</p>
+<a class="b" href="https://www.gilbert.axisspineandsport.com/">Book Gilbert</a>
+</article>
+<article class="loc">
+<h3>Phoenix</h3>
+<p class="m">4515 N 16th St Suite 106<br>Phoenix, AZ 85016</p>
+<a class="p" href="tel:4805205160">(480) 520-5160</a>
+<p class="m">Mon–Thu until 6:30 PM · Fri–Sat mornings</p>
+<a class="b" href="https://www.phoenix.axisspineandsport.com/">Book Phoenix</a>
+</article>
+<article class="loc">
+<h3>Tempe</h3>
+<p class="m">2155 E University Dr #110<br>Tempe, AZ 85288</p>
+<a class="p" href="tel:4804544776">(480) 454-4776</a>
+<p class="m">Mon–Thu until 6:30 PM · Fri–Sat mornings</p>
+<a class="b" href="https://www.tempe.axisspineandsport.com/">Book Tempe</a>
+</article>
+</div>
+</section>
+<footer>
+<p>&copy; 2026 Axis Spine and Sport. Official Arizona State University Athletic Partner.</p>
+<p style="margin-top:.5rem"><a href="https://www.axisspineandsport.com/">axisspineandsport.com</a></p>
+</footer>
 </body>
 </html>
