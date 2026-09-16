@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tempe Chiropractic & Injury Recovery | Axis Spine and Sport</title>
+  <meta name="description" content="Tempe's leading chiropractic facility. Official Arizona State University Athletic Partner. Claim your $59 New Patient Special today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #e5be5e;
+      --gold-dark: #cba245;
+      --dark-grey: #767b7f;
+      --light-grey: #c3cace;
+      --bg-light: #f8fafc;
+      --white: #ffffff;
+      --black: #000000;
+      --border: #c3cace;
+      --radius: 8px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif; }
+    body { color: var(--black); line-height: 1.6; background-color: var(--bg-light); }
+    header { background: var(--black); border-bottom: 2px solid var(--gold); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .logo-img { height: 42px; width: auto; display: block; }
+    .phone-btn { background: var(--gold); color: var(--black); padding: 0.65rem 1.3rem; border-radius: var(--radius); text-decoration: none; font-weight: 800; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .phone-btn:hover { background: var(--gold-dark); }
+    .hero { background: var(--black); color: var(--white); padding: 4rem 2rem; text-align: center; border-bottom: 4px solid var(--gold); }
+    .hero-content { max-width: 800px; margin: 0 auto; }
+    .badge { display: inline-block; background: var(--dark-grey); color: var(--gold); padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; margin-bottom: 1.2rem; border: 1px solid var(--gold); letter-spacing: 1px; }
+    .asu-badge { display: inline-block; background: var(--gold); color: var(--black); padding: 0.35rem 1rem; border-radius: 4px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-left: 0.5rem; }
+    .hero h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: -0.5px; }
+    .hero p { font-size: 1.15rem; margin-bottom: 2rem; color: var(--light-grey); font-weight: 400; }
+    .offer-card { background: var(--white); color: var(--black); max-width: 500px; margin: 0 auto; padding: 2.2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border-top: 5px solid var(--gold); }
+    .offer-title { font-size: 1.4rem; font-weight: 800; color: var(--black); margin-bottom: 0.5rem; text-transform: uppercase; }
+    .price { font-size: 3rem; font-weight: 900; color: var(--black); margin-bottom: 1rem; }
+    .price span { font-size: 1rem; color: var(--dark-grey); font-weight: 600; text-decoration: line-through; }
+    .cta-btn { display: block; width: 100%; background: var(--gold); color: var(--black); padding: 1.1rem; border-radius: var(--radius); text-decoration: none; font-weight: 800; font-size: 1.1rem; text-align: center; margin-top: 1rem; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; }
+    .cta-btn:hover { background: var(--gold-dark); }
+    .proof { padding: 3.5rem 2rem; background: var(--white); text-align: center; border-bottom: 1px solid var(--border); }
+    .proof h2 { font-weight: 800; font-size: 1.8rem; text-transform: uppercase; }
+    .proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; max-width: 1100px; margin: 2rem auto 0; }
+    .proof-item h3 { font-size: 1.8rem; color: var(--black); font-weight: 900; }
+    .proof-item p { color: var(--dark-grey); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+    .insurance-banner { background: var(--light-grey); padding: 1.5rem 2rem; text-align: center; border-bottom: 1px solid var(--border); }
+    .insurance-banner p { font-weight: 700; color: var(--black); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .services { padding: 4.5rem 2rem; max-width: 1100px; margin: 0 auto; }
+    .services h2 { text-align: center; font-size: 2rem; color: var(--black); margin-bottom: 2.5rem; font-weight: 800; text-transform: uppercase; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .service-card { background: var(--white); padding: 2.2rem; border-radius: var(--radius); border: 1px solid var(--border); border-left: 5px solid var(--gold); }
+    .service-card h3 { color: var(--black); margin-bottom: 0.75rem; font-size: 1.25rem; font-weight: 800; }
+    .service-card p { color: var(--dark-grey); font-weight: 400; font-size: 0.95rem; }
+    .location-info { background: var(--white); padding: 4.5rem 2rem; border-top: 1px solid var(--border); }
+    .location-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    @media (max-width: 768px) { .location-container { grid-template-columns: 1fr; } .hero h1 { font-size: 1.8rem; } }
+    footer { background: var(--black); color: var(--light-grey); text-align: center; padding: 2rem; font-size: 0.85rem; border-top: 1px solid var(--dark-grey); font-weight: 600; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Axis Spine and Sport - Tempe",
+    "url": "https://axisspineandsport.com/locations/tempe",
+    "logo": "https://axisspineandsport.com/logo.png",
+    "medicalSpecialty": "Chiropractic",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2155 E University Dr #110",
+      "addressLocality": "Tempe",
+      "addressRegion": "AZ",
+      "postalCode": "85288",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-480-454-4776"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <a href="https://www.axisspineandsport.com/"><img src="/logo.png" alt="Axis Spine and Sport Logo" class="logo-img"></a>
+    <a href="tel:4804544776" class="phone-btn">Call Tempe Clinic</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div>
+        <span class="badge">TEMPE, AZ LOCATION</span>
+        <span class="asu-badge">ASU Athletic Partner</span>
+      </div>
+      <h1 style="margin-top: 1rem;">Chiropractic & Mobility Care in Tempe</h1>
+      <p>Helping Tempe patients and active adults recover faster at Axis Spine and Sport.</p>
+      
+      <div class="offer-card">
+        <div class="offer-title">New Patient Consultation & Exam</div>
+        <div class="price">$59 <span>Over $700 value</span></div>
+        <p style="font-size: 0.95rem; color: #767b7f; margin-bottom: 0.5rem;">Includes Consultation, Physical Exam, Movement & Alignment Analysis, Digital X-Rays (if needed), and Personalized First Treatment.</p>
+        <a href="#book" class="cta-btn">Claim Your $59 Visit in Tempe</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof">
+    <h2>Trusted by 2,000+ Active Patients & ASU Athletics</h2>
+    <div class="proof-grid">
+      <div class="proof-item">
+        <h3>2,000+</h3>
+        <p>5-Star Patient Reviews</p>
+      </div>
+      <div class="proof-item">
+        <h3>Mon–Sat</h3>
+        <p>Open Mon–Thu Until 6:30 PM</p>
+      </div>
+      <div class="proof-item">
+        <h3 style="font-size: 1.4rem; margin-top: 0.4rem;">Board Certified</h3>
+        <p>Chiropractic Physicians</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="insurance-banner">
+    <p>We Accept PPO Health Insurance Plans | Auto Accident Cases | Workers' Compensation Cases</p>
+  </div>
+
+  <section class="services">
+    <h2>Advanced Chiropractic Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Movement & Alignment Analysis</h3>
+        <p>Comprehensive biomechanical assessment identifying root-cause spinal misalignments, postural stress, and joint imbalances.</p>
+      </div>
+      <div class="service-card">
+        <h3>On-Site Digital X-Rays</h3>
+        <p>State-of-the-art diagnostic imaging to pinpoint structural issues and guide targeted chiropractic adjustments safely.</p>
+      </div>
+      <div class="service-card">
+        <h3>Shockwave Therapy</h3>
+        <p>Non-invasive acoustic waves to accelerate healing in stubborn tendonitis, plantar fasciitis, and chronic joint stiffness.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="location-info" id="book">
+    <div class="location-container">
+      <div>
+        <h2 style="color: var(--black); margin-bottom: 1rem; font-weight: 800; text-transform: uppercase;">Visit Our Tempe Location</h2>
+        <p style="margin-bottom: 0.5rem; color: var(--dark-grey);"><strong>Axis Spine and Sport - Tempe</strong></p>
+        <p style="margin-bottom: 0.5rem; color: var(--dark-grey);">2155 E University Dr #110<br>Tempe, AZ 85288</p>
+        <p style="margin-bottom: 1rem; color: var(--dark-grey);">Serving Tempe, ASU, and the East Valley.</p>
+        <p><strong>Hours:</strong> Mon–Thu until 6:30 PM · Fri–Sat mornings · Sun closed</p>
+        <p style="margin-top: 1rem;"><a href="tel:4804544776" style="color: var(--black); font-weight:800; text-decoration: underline;">(480) 454-4776</a></p>
+        <p style="margin-top: 1.25rem;"><a href="https://www.tempe.axisspineandsport.com/" class="cta-btn" style="display:inline-block; width:auto; padding: 0.9rem 1.5rem;">Book Tempe Online</a></p>
+      </div>
+      <div style="background: var(--light-grey); min-height: 250px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--dark-grey); border: 1px solid var(--border); font-weight: 700; padding: 1.5rem; text-align: center;">
+        2155 E University Dr #110<br>Tempe, AZ 85288
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Axis Spine and Sport. Official Arizona State University Athletic Partner. | Tempe Chiropractic</p>
+  </footer>
+</body>
+</html>
